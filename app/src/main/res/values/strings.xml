@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NovahMathMind</string>
+    <string name="game_icon_description">Game Icon</string>
+
+    <!-- Math Challenge -->
+    <string name="math_challenge_score">Score: %d</string>
+    <string name="math_challenge_timer">Time: %ds</string>
+    <string name="math_challenge_start_prompt">Select Difficulty and Start!</string>
+    <string name="math_challenge_answer_hint">Your Answer</string>
+    <string name="math_challenge_submit_button">Submit Answer</string>
+    <string name="math_challenge_start">Start Game</string>
+    <string name="math_challenge_restart">Restart Game</string>
+
+</resources>
