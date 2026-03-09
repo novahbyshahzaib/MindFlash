@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="General">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="language"
+            app:title="Language"
+            app:summary="English" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about_app"
+            app:title="About NovahMathMind"
+            app:summary="Version 1.0" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="Credits">
+        <!-- This custom preference will contain the "Coded by Novah" text -->
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="coded_by_novah"
+            app:layout="@layout/custom_coded_by_novah_preference"
+            app:title="" /> <!-- Title left empty as it's handled by custom layout -->
+    </PreferenceCategory>
+
+</PreferenceScreen>
