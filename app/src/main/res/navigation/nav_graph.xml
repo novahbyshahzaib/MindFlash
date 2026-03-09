@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.novah.mathmind.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.novah.mathmind.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@xml/settings_root_preferences">
+        <action
+            android:id="@+id/action_settingsFragment_to_developerOptionsFragment"
+            app:destination="@id/developerOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/developerOptionsFragment"
+        android:name="com.novah.mathmind.ui.developer.DeveloperOptionsFragment"
+        android:label="Developer Options"
+        tools:layout="@layout/fragment_developer_options">
+        <action
+            android:id="@+id/action_developerOptionsFragment_to_addGameFragment"
+            app:destination="@id/addGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGameFragment"
+        android:name="com.novah.mathmind.ui.developer.AddGameFragment"
+        android:label="Add Custom Game"
+        tools:layout="@layout/fragment_add_game" />
+</navigation>
