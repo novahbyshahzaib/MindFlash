@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".games.mathchallenge.MathChallengeActivity">
+
+    <TextView
+        android:id="@+id/text_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/math_challenge_score"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Score: 0" />
+
+    <TextView
+        android:id="@+id/text_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/math_challenge_timer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Time: 15s" />
+
+    <TextView
+        android:id="@+id/text_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/math_challenge_start_prompt"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_score"
+        tools:text="27 + 57 = ?" />
+
+    <EditText
+        android:id="@+id/edit_answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/math_challenge_answer_hint"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_question" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/math_challenge_submit_button"
+        android:textSize="20sp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_answer" />
+
+    <TextView
+        android:id="@+id/text_difficulty_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty:"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_submit" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_difficulty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_difficulty_label">
+
+        <RadioButton
+            android:id="@+id/radio_easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radio_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radio_hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_start_restart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/math_challenge_start"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_difficulty"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
